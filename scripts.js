@@ -39,7 +39,7 @@ for (let i = 0; i < enlacesSinVisita.length; i++) {
 
 //2.3 Bloques de article o section: Cambia el color de fondo.
 
-    document.querySelectorAll("article").forEach(function (articulo) {
+    document.querySelectorAll("article,section").forEach(function (articulo) {
       articulo.addEventListener("click", function () {
         articulo.style.background="green";
       })
@@ -64,7 +64,7 @@ for (let i = 0; i < enlacesSinVisita.length; i++) {
 
     //3.3 Bloques de `article` o `section`: Color de fondo distinto al de párrafo.
 
-    document.querySelectorAll("article").forEach(function(articulo){
+    document.querySelectorAll("article,section").forEach(function(articulo){
       articulo.addEventListener("mouseover", function() {
         articulo.style.background="red";
       })
@@ -118,7 +118,7 @@ console.log(getRandom(colors));
 
   //5.3.2 Bloques de `article` o `section`: Color de fondo distinto al de párrafo.
 
-  document.querySelectorAll("article").forEach(function(articulo){
+  document.querySelectorAll("article,section").forEach(function(articulo){
     articulo.addEventListener("mouseover", function() {
       articulo.style.background=getRandom(paletaColores);
     })

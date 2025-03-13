@@ -3,7 +3,7 @@ const enlacesSinVisita = document.querySelectorAll("a");
 
 for (let i = 0; i < enlacesSinVisita.length; i++) {
     console.log(enlacesSinVisita[i].innerHTML);
-    enlacesSinVisita[i].href = "";
+    enlacesSinVisita[i].href = "#";
 }
 
 //2.Al hacer click sobre un elemento van a ocurrir varias cosas. Todo depende del tipo de elemento:
@@ -106,6 +106,14 @@ console.log(getRandom(colors));
       parrafo.style.color=getRandom(paletaColores);
       parrafo.style.background=getRandom(paletaColores);
     })
+  });
+
+
+  document.querySelectorAll("img").forEach(function(imagenes) {
+    const fotosDefault = imagenes.src
+    imagenes.addEventListener("mouseleave", function () {
+      imagenes.src = fotosDefault;
+    });
   });
 
   //5.3.2 Bloques de `article` o `section`: Color de fondo distinto al de párrafo.
